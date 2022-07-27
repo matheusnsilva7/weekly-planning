@@ -1,0 +1,25 @@
+.container{
+    margin:10vh auto;
+    background-color:$color-white;
+    height:80vh;
+    width:80vw;
+    border-radius: .5rem;
+    display:grid;
+    grid-template-columns: 1fr 2.5fr;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.25);
+
+    &__list{
+        border-radius: .5rem 0 0 .5rem;
+        &-home{
+            border-radius: 0.5rem 0 0 0;
+            background-color:$color-primary-light;
+            padding:1.5rem 12vw;
+            fill:$color-white;
+        }
+    }
+    &_overview{
+        background-color: $color-grey-light-2;
+        border-radius: 0 .5rem .5rem 0;
+    }
+    
+}
