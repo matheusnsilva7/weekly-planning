@@ -3,18 +3,32 @@
     background-color:$color-white;
     height:80vh;
     width:80vw;
-    border-radius: .5rem;
+    border-radius: .2rem;
     display:grid;
-    grid-template-columns: 1fr 2.5fr;
+    grid-template-columns: 1fr 4fr;
     box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.25);
 
     &__list{
-        border-radius: .5rem 0 0 .5rem;
+        border-radius: .2rem 0 0 .2rem;
         &-home{
-            border-radius: 0.5rem 0 0 0;
+            border-radius: 0.2rem 0 0 0;
             background-color:$color-primary-light;
-            padding:1.5rem 12vw;
+            padding:1rem 10vw;
             fill:$color-white;
+        }
+        &-row{
+            padding:2rem 4rem;
+            border-bottom: 1px solid $color-grey-light-1;
+            position: relative;
+            &-btn{
+                display:flex;
+                position:absolute;
+                top: 45%;
+                left: 5rem;
+            }
+            &-btn > *:not(:last-child){
+                margin-right: .8rem;
+            }
         }
     }
     &_overview{
@@ -22,4 +36,36 @@
         border-radius: 0 .5rem .5rem 0;
     }
     
+}
+.btn{
+    &-red{
+        background-color: rgb(255, 109, 109);
+        width: .7rem;
+        height: .7rem;
+        border-radius: 50%;
+        &:hover{
+            background-color: red;
+            transform: scale(1.4);
+        }
+    }
+    &-yellow{
+        background-color: rgb(253, 253, 110);
+        width: .7rem;
+        height: .7rem;
+        border-radius: 50%;
+        &:hover{
+            background-color: yellow;
+            transform: scale(1.4);
+        }
+    }
+    &-green{
+        background-color: rgb(54, 126, 54);
+        width: .7rem;
+        height: .7rem;
+        border-radius: 50%;
+        &:hover{
+            background-color: green;
+            transform: scale(1.4);
+        }
+    }
 }
