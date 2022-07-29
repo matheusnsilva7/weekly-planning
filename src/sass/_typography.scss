@@ -1,5 +1,19 @@
+h1{
+    font-weight: 300;
+    color:$color-grey-dark-3;
+    letter-spacing: 1px;
+}
+.btn{
+    color:$color-white;
+    text-transform: uppercase;
+}
 h3{
-    font-weight: 400;
-    font-size: 2rem;
+    font-weight: 300;
+    color:$color-grey-dark-3;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.weekly-activity-name{
+    font-size:1.5rem;
     text-align: center;
 }

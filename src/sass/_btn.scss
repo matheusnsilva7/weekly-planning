@@ -1,0 +1,16 @@
+.btn{
+    border:none;
+    padding:1rem 2rem;
+    &-remove{
+        background-color: $color-secondary-dark;
+        &:hover{
+            background-color: rgba($color-secondary-dark,.7);
+        }
+    }
+    &-add{
+        background-color: $color-green-light;
+        &:hover{
+            background-color: rgba($color-green-light,.7);
+        }
+    }
+}
