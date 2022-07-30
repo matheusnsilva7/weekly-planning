@@ -1,6 +1,8 @@
 .btn{
     border:none;
+    border-radius: .5rem;
     padding:1rem 2rem;
+    cursor: pointer;
     &-remove{
         background-color: $color-secondary-dark;
         &:hover{
