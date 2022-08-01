@@ -11,6 +11,7 @@
         justify-content: space-around;
         padding: 2rem 0;
         align-items:center;
+        position: relative;
     }
     &__container{
         display:grid;
@@ -40,7 +41,9 @@
     }
     &-checked{
         position: absolute;
-        display: none;;
+        display: none;
+        fill:$color-primary-light;
+        cursor: pointer;
     }
     &-exit{
         fill:$color-secondary-dark;

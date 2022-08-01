@@ -17,44 +17,40 @@
     <div class="weekly">
         <div class="weekly__header">
             <button class="btn btn-remove">remove activity</button>
+            <button class="btn btn-removeAll">remove all activity</button>
             <h1>Weekly planning</h1>
             <button class="btn btn-add">add activity</button>
         </div>
         <div class="weekly__container">
-            <div class="weekly__container__monday" id="day1">
+            <div class="weekly__container__monday">
                 <h3>Monday</h3>
-                <div class="weekly__container-activity">
-                    <div class="weekly-activity-checked">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
-                            <path d="m8.938 13 4.958-4.938L12.833 7l-3.895 3.875-1.771-1.75-1.063 1.063ZM4.5 17q-.625 0-1.062-.438Q3 16.125 3 15.5v-11q0-.625.438-1.062Q3.875 3 4.5 3h11q.625 0 1.062.438Q17 3.875 17 4.5v11q0 .625-.438 1.062Q16.125 17 15.5 17Zm0-1.5h11v-11h-11v11Zm0-11v11-11Z"/>
-                        </svg>
-                    </div>
-                    <div class="weekly-activity-box">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
-                            <path d="M4.5 17q-.625 0-1.062-.438Q3 16.125 3 15.5v-11q0-.625.438-1.062Q3.875 3 4.5 3h11q.625 0 1.062.438Q17 3.875 17 4.5v11q0 .625-.438 1.062Q16.125 17 15.5 17Zm0-1.5h11v-11h-11v11Z"/>
-                        </svg>
-                    </div>
-                    <div class="weekly-activity-time">13h</div>
-                    <div class="weekly-activity-name">workout</div>
-                    <div class="weekly-activity-exit">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
-                            <path d="M6.062 15 5 13.938 8.938 10 5 6.062 6.062 5 10 8.938 13.938 5 15 6.062 11.062 10 15 13.938 13.938 15 10 11.062Z"/>
-                        </svg>
-                    </div>
+                <div class="weekly__container__monday-box" id="day1">
+                    
                 </div>
-                <hr>
             </div>
-            <div class="weekly__container__tuesday"id="day2" >
+            <div class="weekly__container__tuesday" >
                 <h3>Tuesday</h3>
+                <div class="weekly__container__tuesday-box" id="day2">
+                    
+                </div>
             </div>
-            <div class="weekly__container__wednesday" id="day3">
+            <div class="weekly__container__wednesday">
                 <h3>Wednesday</h3>
+                <div class="weekly__container__wednesday-box" id="day3">
+                    
+                </div>
             </div>
-            <div class="weekly__container__thursday" id="day4">
+            <div class="weekly__container__thursday">
                 <h3>Thursday</h3>
+                <div class="weekly__container__thursday-box" id="day4">
+                    
+                </div>
             </div>
-            <div class="weekly__container__friday" id="day5">
+            <div class="weekly__container__friday">
                 <h3>Friday</h3>
+                <div class="weekly__container__friday-box" id="day5">
+
+                </div>
             </div>
         </div>    
     </div>
@@ -63,14 +59,14 @@
             <form class="add__activity-form">
                 <label for="activity">What is your activity?</label>
                 <label for="time">what time?</label>
-                <input type="text" class="add__activity-box-Activity" name="activity" maxlength="15" id ="activity" placeholder="Activity">
+                <input type="text" class="add__activity-box-Activity" name="activity" maxlength="10" id ="activity" placeholder="Activity">
                 <input type="time" class="add__activity-box-time" id="time"name="time">
                 <div class="add__activity-box-week">
-                    <input type="checkbox" class="add__activity-box-weekdays" id="monday" name="1day" value="monday" checked>
-                    <input type="checkbox" class="add__activity-box-weekdays" id="tuesday" name="2day" value="tuesday">
-                    <input type="checkbox" class="add__activity-box-weekdays" id="wednesday" name="3day" value="wednesday">
-                    <input type="checkbox" class="add__activity-box-weekdays" id="thursday" name="4day" value="thursday">
-                    <input type="checkbox" class="add__activity-box-weekdays" id="friday" name="5day" value="friday">
+                    <input type="checkbox" class="add__activity-box-weekdays" id="monday" name="0day" value="monday" checked>
+                    <input type="checkbox" class="add__activity-box-weekdays" id="tuesday" name="1day" value="tuesday">
+                    <input type="checkbox" class="add__activity-box-weekdays" id="wednesday" name="2day" value="wednesday">
+                    <input type="checkbox" class="add__activity-box-weekdays" id="thursday" name="3day" value="thursday">
+                    <input type="checkbox" class="add__activity-box-weekdays" id="friday" name="4day" value="friday">
                     <label for="monday">Monday</label>
                     <label for="tuesday">Tuesday</label>
                     <label for="wednesday">Wednesday</label>

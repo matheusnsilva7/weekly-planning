@@ -5,6 +5,13 @@
     cursor: pointer;
     &-remove{
         background-color: $color-secondary-dark;
+        &All{
+            position:absolute;
+            top:2rem;
+            right:10rem;
+            background-color: $color-secondary-light;
+            display: none;
+        }
         &:hover{
             background-color: rgba($color-secondary-dark,.7);
         }
@@ -15,4 +22,7 @@
             background-color: rgba($color-green-light,.7);
         }
     }
+}
+.btn_active{
+    display:block
 }
