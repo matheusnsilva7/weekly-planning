@@ -6,6 +6,11 @@
     box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.25);
     border-radius: .5rem;
     overflow: hidden;
+    @media screen and (max-width: 900px){
+        overflow: visible;
+        height:auto;
+        padding-bottom: 1.5rem;
+    }
     &__header{
         display:flex;
         justify-content: space-around;
@@ -16,26 +21,42 @@
     &__container{
         display:grid;
         grid-template-columns: repeat(5,1fr);
-        width: 96%;
         height:80%;
         gap:2rem;
-        margin: 2rem;
-        
+        padding:2rem;
+        margin: auto;
+        @media screen and (max-width: 900px){
+            grid-template-columns: repeat(2,1fr);
+        }
+        @media screen and (max-width: 700px){
+            grid-template-columns: 1fr;
+            padding:3rem;
+        }
         & > *{
             background-color: $color-white;
             border-radius: .5rem;
             border:1px solid $color-grey-light-2;
             padding: 2rem;
+            overflow: auto;
+            @media screen and (max-width: 900px){
+                height:35rem;
+            }
         }
         &-activity{
             padding: 1.5rem 0;
             display:grid;
-            grid-template-columns: 1fr 1fr 3fr 1fr;
+            grid-template-columns: 2fr 8fr 2fr;
             align-items: center;
+            position:relative;
         }
     }
 }
 .weekly-activity{
+    &-time{
+        grid-row: 1;
+        grid-column: 1/4;
+        margin: auto;
+    }
     &-box{
         cursor: pointer;
     }
@@ -44,6 +65,7 @@
         display: none;
         fill:$color-primary-light;
         cursor: pointer;
+        bottom: 1.8rem;
     }
     &-exit{
         fill:$color-secondary-dark;
@@ -54,19 +76,22 @@
 }
 
 .add__activity{
-    position:absolute;
+    position:fixed;
     top:0;
     left:0;
     background-color: rgba($color-grey-light-2,.7);
     width: 100vw;
     height: 100vh;
     display: none;
+    align-items: center;
+    justify-content: center;
     &-box{
-        margin: 30vh auto;
         background-color:$color-white;
-        width:50rem;
         padding:4rem;
         border-radius: .5rem;
+        @media screen and (max-width: 900px){
+            padding:2rem;
+        }
         &-week{
             grid-column: span 2;
             margin-top: 2rem;
@@ -110,5 +135,13 @@
     }
 }
 .active{
-    display:block
+    display:flex;
+}
+.not-active{
+    opacity: 0;
+    z-index:-1;
+}
+.text-line{
+    text-decoration-line: line-through;
+    color: $color-primary-light;
 }

@@ -3,14 +3,27 @@
     border-radius: .5rem;
     padding:1rem 2rem;
     cursor: pointer;
+    @media screen and (max-width: 900px){
+        padding:.5rem .5rem;
+    }
     &-remove{
         background-color: $color-secondary-dark;
         &All{
             position:absolute;
             top:2rem;
-            right:10rem;
+            right: 6vw;
             background-color: $color-secondary-light;
             display: none;
+            @media screen and (max-width: 600px){
+                right:.7vw;
+                white-space: pre-wrap;
+                width:11rem
+            }
+            @media screen and (max-width: 420px){
+                top:2.3rem;
+                right:0;
+                width:9rem;
+            }
         }
         &:hover{
             background-color: rgba($color-secondary-dark,.7);
