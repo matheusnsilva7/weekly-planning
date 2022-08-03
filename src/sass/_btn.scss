@@ -14,15 +14,23 @@
             right: 6vw;
             background-color: $color-secondary-light;
             display: none;
-            @media screen and (max-width: 600px){
+            @media (max-width:700px){
+                right: .5rem;
+            }
+            @media(max-width: 600px){
                 right:.7vw;
                 white-space: pre-wrap;
-                width:11rem
+                width:12rem
             }
-            @media screen and (max-width: 420px){
+            @media (max-width: 460px){
+                top:2rem;
+                right:0;
+                width:10rem
+            }
+            @media (max-width: 420px){
                 top:2.3rem;
                 right:0;
-                width:9rem;
+                width:9.5rem;
             }
         }
         &:hover{

@@ -21,7 +21,7 @@
     &__container{
         display:grid;
         grid-template-columns: repeat(5,1fr);
-        height:80%;
+        height:87%;
         gap:2rem;
         padding:2rem;
         margin: auto;
@@ -63,8 +63,6 @@
     &-checked{
         position: absolute;
         display: none;
-        fill:$color-primary-light;
-        cursor: pointer;
         bottom: 1.8rem;
     }
     &-exit{
@@ -133,6 +131,33 @@
         row-gap:2rem;
         text-align:center;
     }
+}
+.check{
+    border: 2px solid $color-grey-dark-3;
+    border-radius: .5rem;
+    width:1.7rem;
+    height:1.7rem;
+    margin-left: .5rem;
+}
+.checked-box{
+    border: 2px solid $color-primary-light;
+    border-radius: .5rem;
+    width:1.7rem;
+    height:1.7rem;
+    margin-left: .5rem;
+    background-color: $color-primary-light;
+    fill: white;
+    position: relative;
+    top: 0.4rem;
+    & svg{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50% , -50%);
+    }
+}
+.checked{
+    cursor: pointer;
 }
 .active{
     display:flex;
