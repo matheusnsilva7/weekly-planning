@@ -1,172 +1,189 @@
-.weekly{   
-    margin:5vh auto;
-    background-color:$color-grey-light-1;
-    height:90vh;
-    width:90vw;
-    box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.25);
-    border-radius: .5rem;
-    overflow: hidden;
-    @media screen and (max-width: 900px){
-        overflow: visible;
-        height:auto;
-        padding-bottom: 1.5rem;
-    }
-    &__header{
-        display:flex;
-        justify-content: space-around;
-        padding: 2rem 0;
-        align-items:center;
-        position: relative;
-    }
-    &__container{
-        display:grid;
-        grid-template-columns: repeat(5,1fr);
-        height:87%;
-        gap:2rem;
-        padding:2rem;
-        margin: auto;
-        @media screen and (max-width: 900px){
-            grid-template-columns: repeat(2,1fr);
-        }
-        @media screen and (max-width: 700px){
-            grid-template-columns: 1fr;
-            padding:3rem;
-        }
-        & > *{
-            background-color: $color-white;
-            border-radius: .5rem;
-            border:1px solid $color-grey-light-2;
-            padding: 2rem;
-            overflow: auto;
-            @media screen and (max-width: 900px){
-                height:35rem;
-            }
-        }
-        &-activity{
-            padding: 1.5rem 0;
-            display:grid;
-            grid-template-columns: 2fr 8fr 2fr;
-            align-items: center;
-            position:relative;
-        }
-    }
-}
-.weekly-activity{
-    &-time{
-        grid-row: 1;
-        grid-column: 1/4;
-        margin: auto;
-    }
-    &-box{
-        cursor: pointer;
-    }
-    &-checked{
-        position: absolute;
-        display: none;
-        bottom: 1.8rem;
-    }
-    &-exit{
-        fill:$color-secondary-dark;
-        display: none;
-        cursor: pointer;
-    }
-
-}
-
-.add__activity{
-    position:fixed;
-    top:0;
-    left:0;
-    background-color: rgba($color-grey-light-2,.7);
-    width: 100vw;
-    height: 100vh;
-    display: none;
+.weekly {
+  margin: 5vh auto;
+  background-color: $color-grey-light-1;
+  height: 90vh;
+  width: 90vw;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  @media screen and (max-width: 900px) {
+    overflow: visible;
+    height: auto;
+    padding-bottom: 1.5rem;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
     align-items: center;
-    justify-content: center;
-    &-box{
-        background-color:$color-white;
-        padding:4rem;
-        border-radius: .5rem;
-        @media screen and (max-width: 900px){
-            padding:2rem;
-        }
-        &-week{
-            grid-column: span 2;
-            margin-top: 2rem;
-            display: grid;
-            grid-template-columns: repeat(5,1fr);
-        }
-        &-submit{
-            grid-column: span 2;
-            border:none;
-            background-color: $color-primary-light;
-            color:white;
-            border-radius: .5rem;
-            margin:auto;
-            margin-top:1rem;
-            padding:.5rem 9rem;
-            cursor: pointer;
-
-            &:hover{
-                background-color: rgba($color-primary-light,.7);
-            }
-            
-        }
-        &-Activity,
-        &-time{
-            border: 1px solid $color-grey-dark-2;
-            border-radius: .5rem;
-            padding: .4rem 0;
-            cursor: pointer;
-            text-align: center;
-            &:focus{
-                outline: none;
-            }
-        }
-    }
-    &-form{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        column-gap: 4rem;
-        row-gap:2rem;
-        text-align:center;
-    }
-}
-.check{
-    border: 2px solid $color-grey-dark-3;
-    border-radius: .5rem;
-    width:1.7rem;
-    height:1.7rem;
-    margin-left: .5rem;
-}
-.checked-box{
-    border: 2px solid $color-primary-light;
-    border-radius: .5rem;
-    width:1.7rem;
-    height:1.7rem;
-    margin-left: .5rem;
-    background-color: $color-primary-light;
-    fill: white;
     position: relative;
-    top: 0.4rem;
-    & svg{
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50% , -50%);
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 87%;
+    gap: 2rem;
+    padding: 2rem;
+    margin: auto;
+    @media screen and (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
     }
+    @media screen and (max-width: 700px) {
+      grid-template-columns: 1fr;
+      padding: 3rem;
+    }
+    & > * {
+      background-color: $color-white;
+      border-radius: 0.5rem;
+      border: 1px solid $color-grey-light-2;
+      padding: 2rem;
+      overflow: auto;
+      @media screen and (max-width: 900px) {
+        height: 35rem;
+      }
+    }
+    &-activity {
+      padding: 0.5rem 2rem 1rem 2rem;
+      display: grid;
+      grid-template-columns: 2fr 8fr 2fr;
+      align-items: center;
+      position: relative;
+      background: #2998ff7a;
+      border-radius: 0.5rem;
+      margin: 2rem 0;
+      color: white;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      @media screen and (min-width: 900px) {
+        padding: 0.5rem 1rem 1.5rem 1rem;
+      }
+    }
+  }
 }
-.checked{
+.weekly-activity {
+  &-time {
+    grid-row: 1;
+    grid-column: 1/4;
+    margin: auto;
+  }
+  &-name {
+    font-size: 1.7rem;
+  }
+  &-box {
     cursor: pointer;
+    color: white;
+  }
+  &-checked {
+    position: absolute;
+    display: none;
+    left: 2rem;
+    top: 1.6rem;
+    @media screen and (min-width: 900px) {
+      left: 1rem;
+    }
+  }
+  &-exit {
+    fill: $color-secondary-dark;
+    display: none;
+    cursor: pointer;
+  }
 }
-.active{
-    display:flex;
+
+.add__activity {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-grey-light-2, 0.7);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  &-box {
+    background-color: $color-white;
+    padding: 4rem;
+    border-radius: 0.5rem;
+    @media screen and (max-width: 900px) {
+      padding: 2rem;
+    }
+    &-week {
+      grid-column: span 2;
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+    &-submit {
+      grid-column: span 2;
+      border: none;
+      background-color: $color-primary-light;
+      color: white;
+      border-radius: 0.5rem;
+      margin: auto;
+      margin-top: 1rem;
+      padding: 0.5rem 9rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba($color-primary-light, 0.7);
+      }
+    }
+    &-Activity,
+    &-time {
+      border: 1px solid $color-grey-dark-2;
+      border-radius: 0.5rem;
+      padding: 0.4rem 0;
+      cursor: pointer;
+      text-align: center;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+    row-gap: 2rem;
+    text-align: center;
+  }
 }
-.not-active{
-    opacity: 0;
-    z-index:-1;
+.check {
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: 0.5rem;
 }
-.text-line{
-    text-decoration-line: line-through;
-    color: $color-primary-light;
+.checked-box {
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: 0.5rem;
+  background-color: #2998ff7a;
+  fill: white;
+  position: relative;
+  top: 0.4rem;
+  & svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.checked {
+  cursor: pointer;
+}
+.active {
+  display: flex;
+}
+.not-active {
+  opacity: 0;
+  z-index: -1;
+}
+.text-line {
+  text-decoration-line: line-through;
+  color: white;
+}
+.days {
+  min-height: 85%;
 }

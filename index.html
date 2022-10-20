@@ -1,82 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Weekly Planning</title>
     <link rel="stylesheet" href="src/sass/main.scss" />
     <script type="module" src="src/js/controller.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="weekly">
-        <div class="weekly__header">
-            <button class="btn btn-remove">remove activity</button>
-            <button class="btn btn-removeAll">remove all activity</button>
-            <h1>Weekly planning</h1>
-            <button class="btn btn-add">add activity</button>
+      <div class="weekly__header">
+        <button class="btn btn-remove">remove activity</button>
+        <button class="btn btn-removeAll">remove all activity</button>
+        <h1>Weekly planning</h1>
+        <button class="btn btn-add">add activity</button>
+      </div>
+      <div class="weekly__container">
+        <div class="weekly__container__monday">
+          <h3>Monday</h3>
+          <div class="weekly__container__monday-box days" id="day1"></div>
         </div>
-        <div class="weekly__container">
-            <div class="weekly__container__monday">
-                <h3>Monday</h3>
-                <div class="weekly__container__monday-box days" id="day1">
-                    
-                </div>
-            </div>
-            <div class="weekly__container__tuesday">
-                <h3>Tuesday</h3>
-                <div class="weekly__container__tuesday-box days" id="day2">
-                    
-                </div>
-            </div>
-            <div class="weekly__container__wednesday">
-                <h3>Wednesday</h3>
-                <div class="weekly__container__wednesday-box days" id="day3">
-                    
-                </div>
-            </div>
-            <div class="weekly__container__thursday ">
-                <h3>Thursday</h3>
-                <div class="weekly__container__thursday-box days" id="day4">
-                    
-                </div>
-            </div>
-            <div class="weekly__container__friday">
-                <h3>Friday</h3>
-                <div class="weekly__container__friday-box days" id="day5">
-
-                </div>
-            </div>
-        </div>    
+        <div class="weekly__container__tuesday">
+          <h3>Tuesday</h3>
+          <div class="weekly__container__tuesday-box days" id="day2"></div>
+        </div>
+        <div class="weekly__container__wednesday">
+          <h3>Wednesday</h3>
+          <div class="weekly__container__wednesday-box days" id="day3"></div>
+        </div>
+        <div class="weekly__container__thursday">
+          <h3>Thursday</h3>
+          <div class="weekly__container__thursday-box days" id="day4"></div>
+        </div>
+        <div class="weekly__container__friday">
+          <h3>Friday</h3>
+          <div class="weekly__container__friday-box days" id="day5"></div>
+        </div>
+      </div>
     </div>
     <div class="add__activity">
-        <div class="add__activity-box">
-            <form class="add__activity-form">
-                <label for="activity">What is your activity?</label>
-                <label for="time">what time?</label>
-                <input type="text" class="add__activity-box-Activity" name="activity" maxlength="15" id ="activity" placeholder="Activity">
-                <input type="time" class="add__activity-box-time" id="time"name="time">
-                <div class="add__activity-box-week">
-                    <input type="checkbox" class="add__activity-box-weekdays" id="monday" name="0day" value="monday" checked>
-                    <input type="checkbox" class="add__activity-box-weekdays" id="tuesday" name="1day" value="tuesday">
-                    <input type="checkbox" class="add__activity-box-weekdays" id="wednesday" name="2day" value="wednesday">
-                    <input type="checkbox" class="add__activity-box-weekdays" id="thursday" name="3day" value="thursday">
-                    <input type="checkbox" class="add__activity-box-weekdays" id="friday" name="4day" value="friday">
-                    <label for="monday">Monday</label>
-                    <label for="tuesday">Tuesday</label>
-                    <label for="wednesday">Wednesday</label>
-                    <label for="thursday">Thursday</label>
-                    <label for="friday">Friday</label>
-                    
-                </div>
-                <button class="add__activity-box-submit">&rarr;</button>
-            </form>
-        </div>
+      <div class="add__activity-box">
+        <form class="add__activity-form">
+          <label for="activity">What is your activity?</label>
+          <label for="time">what time?</label>
+          <input
+            type="text"
+            class="add__activity-box-Activity"
+            name="activity"
+            maxlength="15"
+            id="activity"
+            placeholder="Activity"
+          />
+          <input
+            type="time"
+            class="add__activity-box-time"
+            id="time"
+            name="time"
+          />
+          <div class="add__activity-box-week">
+            <input
+              type="checkbox"
+              class="add__activity-box-weekdays"
+              id="monday"
+              name="0day"
+              value="monday"
+              checked
+            />
+            <input
+              type="checkbox"
+              class="add__activity-box-weekdays"
+              id="tuesday"
+              name="1day"
+              value="tuesday"
+            />
+            <input
+              type="checkbox"
+              class="add__activity-box-weekdays"
+              id="wednesday"
+              name="2day"
+              value="wednesday"
+            />
+            <input
+              type="checkbox"
+              class="add__activity-box-weekdays"
+              id="thursday"
+              name="3day"
+              value="thursday"
+            />
+            <input
+              type="checkbox"
+              class="add__activity-box-weekdays"
+              id="friday"
+              name="4day"
+              value="friday"
+            />
+            <label for="monday">Monday</label>
+            <label for="tuesday">Tuesday</label>
+            <label for="wednesday">Wednesday</label>
+            <label for="thursday">Thursday</label>
+            <label for="friday">Friday</label>
+          </div>
+          <button class="add__activity-box-submit">&rarr;</button>
+        </form>
+      </div>
     </div>
-</body>
+  </body>
 </html>
