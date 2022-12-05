@@ -141,6 +141,7 @@ class weeklyPlanning {
         localStorage.setItem("name", JSON.stringify(this._localStorage));
         this._weekDays();
         this._removeAllActivity.classList.remove("btn_active");
+        this._addActivity.classList.remove("btn_not-active");
       }
       if (e.target.classList.contains("check")) {
         this._localStorage[id[0]][index].check = true;
@@ -190,7 +191,7 @@ class weeklyPlanning {
                     }">${e.time}</div>
                     <div class="weekly-activity-name ${
                       e.check === true ? "text-line" : ""
-                    }">${e.activity}</div>
+                    }">${e.ToDo}</div>
                     <div class="weekly-activity-exit">
                         <svg class="exit" xmlns="http://www.w3.org/2000/svg" height="20" width="20">
                             <path class="exit" d="M6.062 15 5 13.938 8.938 10 5 6.062 6.062 5 10 8.938 13.938 5 15 6.062 11.062 10 15 13.938 13.938 15 10 11.062Z"/>
@@ -250,6 +251,7 @@ class weeklyPlanning {
       e.classList.toggle("active");
     });
     this._removeAllActivity.classList.toggle("btn_active");
+    this._addActivity.classList.toggle("btn_not-active");
   }
 }
 

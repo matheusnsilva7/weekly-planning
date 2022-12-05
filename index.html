@@ -19,10 +19,10 @@
   <body>
     <div class="weekly">
       <div class="weekly__header">
-        <button class="btn btn-remove">remove activity</button>
-        <button class="btn btn-removeAll">remove all activity</button>
+        <button class="btn btn-remove">Remove To Do</button>
         <h1>Weekly planning</h1>
-        <button class="btn btn-add">add activity</button>
+        <button class="btn btn-removeAll">Remove all</button>
+        <button class="btn btn-add">New To Do</button>
       </div>
       <div class="weekly__container">
         <div class="weekly__container__monday">
@@ -50,15 +50,15 @@
     <div class="add__activity">
       <div class="add__activity-box">
         <form class="add__activity-form">
-          <label for="activity">What is your activity?</label>
+          <label for="activity">To Do</label>
           <label for="time">what time?</label>
           <input
             type="text"
             class="add__activity-box-Activity"
-            name="activity"
+            name="ToDo"
             maxlength="15"
             id="activity"
-            placeholder="Activity"
+            placeholder="To Do"
           />
           <input
             type="time"
