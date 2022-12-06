@@ -7,7 +7,7 @@ class weeklyPlanning {
   _removeActivity = document.querySelector(".btn-remove");
   _addActivity = document.querySelector(".btn-add");
   _removeAllActivity = document.querySelector(".btn-removeAll");
-  _weekly = document.querySelector(".weekly_container");
+  _weekly = document.querySelector(".weekly__containers");
   _btnExit = Array.from(document.querySelectorAll(".weekly-activity-exit"));
   _btncheck = Array.from(document.querySelectorAll(".weekly-activity-box"));
   _containerAddActivity = document.querySelector(".add__activity");
@@ -37,6 +37,11 @@ class weeklyPlanning {
     document.addEventListener("dragstart", (e) => {
       if (!e.target.draggable) return;
       e.target.classList.add("dragging");
+      this._btnExit.forEach((e) => {
+        e.classList.remove("active");
+      });
+      this._removeAllActivity.classList.remove("btn_active");
+      this._addActivity.classList.remove("btn_not-active");
     });
     document.addEventListener("dragend", (e) => {
       if (document.querySelector(".dragging") === null) return;
@@ -51,6 +56,7 @@ class weeklyPlanning {
       ];
       localStorage.setItem("name", JSON.stringify(this._localStorage));
       e.target.classList.remove("dragging");
+      this._weekly = document.querySelector(".weekly_container");
       this._weekDays();
     });
     this._form.addEventListener("submit", this._addHandlerActivity.bind(this));
