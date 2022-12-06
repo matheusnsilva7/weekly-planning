@@ -18,7 +18,7 @@
     align-items: center;
     position: relative;
   }
-  &__container {
+  &__containers {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     height: 87%;
@@ -44,21 +44,20 @@
       @media screen and (max-width: 1000px) {
         min-height: auto;
       }
-
     }
-    &-activity {
-      padding: 1rem 2rem 1.5rem 2rem;
-      display: grid;
-      grid-template-columns: 2fr 8fr 2fr;
-      align-items: center;
-      position: relative;
-      background: #2998ff7a;
-      border-radius: 0.5rem;
-      margin: 2rem 0;
-      color: white;
-      @media screen and (min-width: 900px) {
-        padding: 0.5rem 1rem 1.5rem 1rem;
-      }
+  }
+  &__container-activity {
+    padding: 1rem 2rem 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    align-items: center;
+    position: relative;
+    background: #2998ff7a;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    color: white;
+    @media screen and (min-width: 900px) {
+      padding: 0.5rem 1rem 1.5rem 1rem;
     }
   }
 }
@@ -190,7 +189,4 @@
 }
 .days {
   min-height: 85%;
-  @media screen and (max-width: 800px) {
-    min-height: 85%;
-  }
 }

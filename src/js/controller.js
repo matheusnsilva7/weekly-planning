@@ -7,12 +7,12 @@ class weeklyPlanning {
   _removeActivity = document.querySelector(".btn-remove");
   _addActivity = document.querySelector(".btn-add");
   _removeAllActivity = document.querySelector(".btn-removeAll");
-  _weekly = document.querySelector(".weekly__container");
+  _weekly = document.querySelector(".weekly_container");
   _btnExit = Array.from(document.querySelectorAll(".weekly-activity-exit"));
   _btncheck = Array.from(document.querySelectorAll(".weekly-activity-box"));
   _containerAddActivity = document.querySelector(".add__activity");
   _form = document.querySelector(".add__activity-form");
-  _days = document.querySelectorAll(".days");
+  _days = Array.from(document.querySelectorAll(".weekly_container"));
   _localStorage = localStorage.getItem("name")
     ? JSON.parse(localStorage.getItem("name"))
     : [[], [], [], [], []];
@@ -65,15 +65,18 @@ class weeklyPlanning {
         )[0];
         this._drop = {
           ...obj,
-          id: (obj.id - obj.id[0] + +item.id[item.id.length - 1] - 1).toFixed(
-            6
-          ),
+          id: (
+            obj.id -
+            obj.id[0] +
+            +item.lastElementChild.id[item.lastElementChild.id.length - 1] -
+            1
+          ).toFixed(6),
         };
-        const position = this._getNewPosition(item);
+        const position = this._getNewPosition(item.lastElementChild);
         if (position) {
           position.insertAdjacentElement("afterend", dragging);
         } else {
-          item.prepend(dragging);
+          item.lastElementChild.prepend(dragging);
         }
       });
     });
