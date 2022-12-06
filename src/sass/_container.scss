@@ -1,7 +1,7 @@
 .weekly {
   margin: 5vh auto;
   background-color: $color-grey-light-1;
-  height: 90vh;
+  min-height: 90vh;
   width: 90vw;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.25);
   border-radius: 0.5rem;
@@ -25,7 +25,7 @@
     gap: 2rem;
     padding: 2rem;
     margin: auto;
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1000px) {
       grid-template-columns: repeat(3, 1fr);
     }
     @media screen and (max-width: 800px) {
@@ -36,14 +36,15 @@
       padding: 3rem;
     }
     & > * {
+      min-height: 45rem;
       background-color: $color-white;
       border-radius: 0.5rem;
       border: 1px solid $color-grey-light-2;
       padding: 2rem;
-      overflow: auto;
-      @media screen and (max-width: 900px) {
-        height: 35rem;
+      @media screen and (max-width: 1000px) {
+        min-height: auto;
       }
+
     }
     &-activity {
       padding: 1rem 2rem 1.5rem 2rem;
@@ -189,9 +190,6 @@
 }
 .days {
   min-height: 85%;
-  @media screen and (max-width: 1100px) {
-    min-height: auto;
-  }
   @media screen and (max-width: 800px) {
     min-height: 85%;
   }

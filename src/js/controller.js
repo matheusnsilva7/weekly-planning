@@ -69,7 +69,6 @@ class weeklyPlanning {
             6
           ),
         };
-
         const position = this._getNewPosition(item);
         if (position) {
           position.insertAdjacentElement("afterend", dragging);
