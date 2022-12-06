@@ -25,7 +25,7 @@
     gap: 2rem;
     padding: 2rem;
     margin: auto;
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1100px) {
       grid-template-columns: repeat(3, 1fr);
     }
     @media screen and (max-width: 800px) {
@@ -41,7 +41,7 @@
       border-radius: 0.5rem;
       border: 1px solid $color-grey-light-2;
       padding: 2rem;
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 1100px) {
         min-height: auto;
       }
     }
