@@ -3,23 +3,19 @@
   border-radius: 0.5rem;
   padding: 1rem 2rem;
   cursor: pointer;
-  @media screen and (max-width: 900px) {
-    padding: 0.5rem 0.5rem;
+  @media (max-width: 550px) {
+    padding: 1rem 0.5rem;
+    width: 8rem;
   }
   &-remove {
     background-color: $color-secondary-dark;
     &All {
       background-color: $color-secondary-light;
+      width: 13.4rem;
       display: none;
-      @media (max-width: 600px) {
-        white-space: pre-wrap;
-        width: 12rem;
-      }
-      @media (max-width: 460px) {
-        width: 10rem;
-      }
-      @media (max-width: 420px) {
-        width: 9.5rem;
+      @media (max-width: 550px) {
+        padding: 1rem 0.5rem;
+        width: 8rem;
       }
     }
     &:hover {
@@ -28,6 +24,11 @@
   }
   &-add {
     background-color: $color-green-light;
+    width: 13.4rem;
+    @media (max-width: 550px) {
+      padding: 1rem 0.5rem;
+      width: 8rem;
+    }
     &:hover {
       background-color: rgba($color-green-light, 0.7);
     }

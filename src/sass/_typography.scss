@@ -3,6 +3,9 @@ h1 {
   color: $color-grey-dark-3;
   letter-spacing: 1px;
   text-align: center;
+  @media (max-width: 500px) {
+    width: 8rem;
+  }
 }
 .btn {
   color: $color-white;
