@@ -23,7 +23,7 @@ The Week Planning Website simplifies your task management by offering an intuiti
 
 ## Demo
 
-Explore the live demo of the Week Planning Website: [https://week-planning-website.netlify.app](https://week-planning-website.netlify.app)
+Explore the live demo of the Week Planning Website: [https://weeklyplanning-matheusnsilva7.netlify.app/](https://weeklyplanning-matheusnsilva7.netlify.app/)
 
 
 ## License
