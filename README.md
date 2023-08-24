@@ -32,4 +32,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For questions or collaboration opportunities, feel free to contact me.
+For questions, suggestions, or collaboration opportunities, feel free to contact me.
